@@ -15,6 +15,15 @@ $outline: #212121;
   background-size: cover;
 }
 
+@mixin jump-link {
+  display: block; 
+  content: ''; 
+  margin-top: -3.5rem; 
+  height: 3.5rem; 
+  visibility: hidden; 
+  pointer-events: none;
+}
+
 .page {
   margin: 0;
   padding: 0;
@@ -27,6 +36,10 @@ $outline: #212121;
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
+
+  &::before { 
+    @include jump-link();
+  }
 }
 
 .menu {
@@ -128,14 +141,38 @@ $outline: #212121;
     }
 }
 
-.offer_features {
-  display: flex;
-  justify-content: space-around;
+.offer {
+
+  &::before { 
+    @include jump-link();
+  }
+
+  &__header {
+    margin: 0;
+    position: relative;
+    font-family: $font-header;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    display: inline-block;
+
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: .7rem;
+      left: 4rem;
+      right: -6rem;
+      border-bottom: 10px solid $primary-color;
+    }
 }
 
-.offer {
   &__paragraph {
     text-align: justify;
+  }
+
+  &__features {
+    display: flex;
+    justify-content: space-around;
   }
 
   &__title {
@@ -186,6 +223,10 @@ $outline: #212121;
 .about {
   margin: 0 1rem;
 
+  &::before { 
+    @include jump-link();
+  }
+
   &__header {
     margin: 0;
     position: relative;
@@ -213,6 +254,10 @@ $outline: #212121;
 .contact {
   margin: 0 1rem;
   position: relative;
+
+  &::before { 
+    @include jump-link();
+  }
 
   &__header {
     margin: 0;
