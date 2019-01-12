@@ -253,6 +253,21 @@
   text-align: justify;
 }
 
+.about__image-container {
+  margin: 1rem 0;
+  height: 10rem;
+  overflow: hidden;
+}
+
+.about__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
+}
+
 .contact {
   margin: 0 1rem;
   position: relative;
@@ -407,6 +422,9 @@
   .offer-image__container {
     height: 25rem;
   }
+  .about__image-container {
+    height: 15rem;
+  }
   .contact__image-container {
     height: 25rem;
   }
@@ -445,9 +463,19 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .about__header {
+    padding: 0 1rem;
+  }
   .about__header::after {
     border-bottom: 10px solid #fff;
     z-index: 1;
+    left: 6rem;
+  }
+  .about__paragraph {
+    padding: 0 1rem;
+  }
+  .about__image-container {
+    display: none;
   }
   .contact-container {
     margin-top: 1rem;
