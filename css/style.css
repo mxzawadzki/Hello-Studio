@@ -63,7 +63,7 @@ html {
   text-align: center;
   font-family: "Libre Baskerville", serif;
   background-image: url("../img/herobanner.jpg");
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -101,7 +101,7 @@ html {
   top: -.25rem;
   left: -1rem;
   right: -.8rem;
-  border-bottom: 20px solid #fff;
+  border-bottom: 1.25rem solid #fff;
 }
 
 .offer__header {
@@ -431,11 +431,19 @@ html {
   .header__subtitle {
     font-size: 2rem;
   }
+  .header__subtitle::after {
+    top: -.3rem;
+    border-bottom: 1.75rem solid #fff;
+  }
 }
 
 @media (min-width: 600px) {
   .header__subtitle {
     font-size: 3rem;
+  }
+  .header__subtitle::after {
+    top: -.5rem;
+    border-bottom: 2.6rem solid #fff;
   }
   .offer__header {
     font-size: 2rem;
@@ -554,6 +562,20 @@ html {
   }
   .contact__image-container {
     width: 16rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    min-height: 24rem;
+  }
+  .header__subtitle {
+    top: 5rem;
+    font-size: 3rem;
+  }
+  .header__subtitle::after {
+    top: -.5rem;
+    border-bottom: 2.6rem solid #fff;
   }
 }
 /*# sourceMappingURL=style.css.map */
