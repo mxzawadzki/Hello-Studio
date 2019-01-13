@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .page {
   margin: 0;
   padding: 0;
@@ -378,6 +382,19 @@
 
 .contact__adress--company-name {
   font-weight: 700;
+}
+
+.contact__invalid {
+  border-bottom: 2px solid #e53935;
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 1rem;
+  background-image: url("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/emojione/151/cross-mark_274c.png");
+}
+
+.contact__invalid::before {
+  content: 'Hehe';
+  display: block;
 }
 
 .footer {
