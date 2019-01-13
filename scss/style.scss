@@ -138,6 +138,7 @@ $outline: #212121;
 
 .offer {
   margin: 1rem;
+  position: relative;
 
   &::before { 
     @include jump-link();
@@ -160,7 +161,7 @@ $outline: #212121;
       right: -6rem;
       border-bottom: 10px solid $secondary-color;
     }
-}
+  }
 
   &__paragraph {
     text-align: justify;
@@ -169,7 +170,7 @@ $outline: #212121;
   &__features {
     display: flex;
     justify-content: space-around;
-
+    margin-bottom: 4rem;
   }
 
   &__title {
@@ -191,30 +192,25 @@ $outline: #212121;
     padding: 1rem 0;
     border-bottom: 2px solid $primary-color;
   }
-}
 
-.offer-image {
-  position: relative;
-  margin: 4rem 1rem 1rem 1rem;
+  &__image-title {
+    text-transform: uppercase;
+  }
+
+  &__image-container {
+    height: 20rem;
+    overflow: hidden;
+  }
 
   &__circle {
     position: absolute;
-    top: -2.5rem;
+    bottom: 18rem;
     left: -3rem;
     border: 10px solid $primary-color;
     border-radius: 50%;
     height: 5rem;
     width: 5rem;
     z-index: -1;
-  }
-
-  &__title {
-    text-transform: uppercase;
-  }
-
-  &__container {
-    height: 20rem;
-    overflow: hidden;
   }
 
   &__image {
@@ -319,6 +315,7 @@ $outline: #212121;
     min-height: 4rem;
     background-color: $primary-color;
     outline-color: $outline;
+    resize: vertical;
   }
 
   &__form-btn {
@@ -406,20 +403,72 @@ $outline: #212121;
 }
 
 @media (min-width: 600px) {
-  .offer-image__container {
-    height: 25rem;
+
+  .header__subtitle {
+    font-size: 3rem;
   }
 
-  .about__image-container {
-    height: 15rem;
+  .offer {
+
+    &__header {
+    font-size: 2rem;
+
+      &::after {
+        top: 1rem;
+        left: 5.5rem;
+        right: -7.5rem;
+      }
+    }
+
+    &__circle {
+      bottom: 23rem;
+    }
+
+    &__image-container {
+      height: 25rem;
+    }
   }
 
-  .contact__image-container {
-    height: 25rem;
+  .about {
+
+    &__header {
+      font-size: 2rem;
+
+      &::after {
+        top: 1rem;
+        left: 6.3rem;
+        right: -7.15rem;
+      }
+    }
+
+    &__image-container {
+      height: 15rem;
+    }
+  }
+
+  .contact {
+    &__header {
+      font-size: 2rem;
+
+      &::after{
+        top: 1rem;
+        left: 8rem;
+        right: -7.15rem;
+      }
+    }
+
+    &__image-container {
+      height: 25rem;
+    }
   }
 }
 
 @media (min-width: 769px) {
+
+  .desktop-container {
+    display: flex;
+    justify-content: space-between;
+  }
 
   .offer-container {
     max-width: 48rem;
@@ -428,15 +477,29 @@ $outline: #212121;
     margin-bottom: 5rem;
   }
 
-  .offer__features {
-    display: flex;
-    justify-content: flex-start;
-  }
+  .offer {
+    &__features {
+      display: flex;
+      justify-content: flex-start;
+    }
 
-  .offer__list {
-    list-style: none;
-    margin-right: 2rem;
-    max-width: 12rem;
+    &__list {
+      list-style: none;
+      margin-right: 2rem;
+      max-width: 12rem;
+    }
+
+    &__features {
+      margin-right: 2rem;
+    }
+
+    &__image-title {
+      margin-top: 4.5rem;
+    }
+
+    &__circle {
+      left: 27rem;
+    }
   }
 
   .about-container {
@@ -457,9 +520,10 @@ $outline: #212121;
       padding: 0 1rem;
 
       &::after {
+        left: 7.5rem;
+        right: -6.35rem;
         border-bottom: 10px solid $tertiary-color;
         z-index: 1;
-        left: 6rem;
       }
     }
 
@@ -477,5 +541,20 @@ $outline: #212121;
     max-width: 48rem;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .contact {
+
+    &__form {
+      width: 28rem;
+    }
+
+    &__circle {
+      left: 27rem;
+    }
+    
+    &__image-container {
+      width: 16rem;
+    }
   }
 }
