@@ -167,10 +167,6 @@ html {
     }
   }
 
-  &__paragraph {
-    text-align: justify;
-  }
-
   &__features {
     display: flex;
     justify-content: space-around;
@@ -249,10 +245,6 @@ html {
       right: -6rem;
       border-bottom: 10px solid $secondary-color;
     }
-  }
-
-  &__paragraph {
-    text-align: justify;
   }
 
   &__image-container {

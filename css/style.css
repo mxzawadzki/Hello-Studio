@@ -156,10 +156,6 @@ html {
   border-bottom: 10px solid #e0e0e0;
 }
 
-.offer__paragraph {
-  text-align: justify;
-}
-
 .offer__features {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -248,10 +244,6 @@ html {
   left: 4.8rem;
   right: -6rem;
   border-bottom: 10px solid #e0e0e0;
-}
-
-.about__paragraph {
-  text-align: justify;
 }
 
 .about__image-container {
